@@ -113,6 +113,8 @@ This code does two things
 - it reorders the bond indices
 - it discards bonds where an atom is missing. This is done in the `try` statement and may be the most important part.
 
+**Note** - I tried it without reordering and looking at resid 10 and resid 20 (selection = `resid 10 or resid 20`) and it crashes without reordering. Reordering is necessary when residues or fragments are not next to each other.
+
 ## Conclusion
 After this change, you should be able to load all test cases specified in this document as well as Orion's test system with the default `MolecularNodes` selection.
 
